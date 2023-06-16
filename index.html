@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Model Deployment Options</title>
+    <link rel="stylesheet" type="text/css" href="./inspector.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module">
+        import define from "./index.js";
+        import {Runtime, Library, Inspector} from "./runtime.js";
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+    </script>
+</head>
+<body>
+</body>
+</html>

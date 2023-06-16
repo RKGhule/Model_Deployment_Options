@@ -1,0 +1,87 @@
+{
+ "name": "Deployment-Platform",
+ "children": [
+		  {"name": "Cloud",
+		  "children":[{"name":"Real Time",
+		  "children":
+		  [{"name":"API Based Deployment",
+		  "children":[
+		  {
+			  "name":"Pros:",
+"children":[{"name":"Platform-agnostic"},
+	{"name":"Scalability => horizontal scalability "},
+		{"name":"Loose Coupling"},
+		  {"name":" Standardization => HTTP methods  ( GET, Post etc.)"}]},
+		  {
+			"name":"Cons:",
+			"children":[{"name":"Statelessness => each request is treated as independent operation"},
+		{"name":"require constant communication between client and server"},
+	{"name":"Additional Infra is required like load balancers, API gateways and server management"}]
+
+		  }]},
+			  {"name":"Containerization",
+			  "children":[
+			  {"name":"Docker",
+			"children":[
+				{"name":"Pros:",
+			"children":[
+				{"name":"Allows you to package an application and its dependencies into a container, which makes it portable"},
+				{"name":"Isolation => application and host system"},
+				{"name":" Scalability => allows you to replicate containers"},
+				{"name":" Version control and reproducibility"}
+			]},
+			{"name":"Cons:",
+		"children":[{"name":"Learning Curve"},
+		{"name":" Resource overhead : as it adds a layer of abstraction and consumes additional resource"},
+		{"name":"Security concerns: Container hardening and image scanning"},
+		{"name":" Persistence data storage as data is lost once container is stopped"}]}
+			]},
+				  {"name":"Kubernetes",
+				  "children":[
+					{"name":"Pros:",
+					"children":[
+						{"name":"Scalability: Automatically distributing containers across multiple node"},
+						{"name":"High availability => automatically restart failed container, redistribute workloads and maintain desired state of your applications"},
+						{"name":" Flexibility and portability => Platform agnostic and easiness in moving applications"},
+						{"name":"Self Healing Capabilities => monitors the health of container"},
+						{"name":" Resource efficiency => pack multiple containers on single node, leading to better resource utilization and cost saving"}
+
+					]},
+					{"name":"Cons:",
+				"children":[{"name":"Steep Learning Curve"},
+				{"name":"Operational Overhead: Dedicated resource and team are required to handle it"},
+				{"name":"Networking Challenges"},
+				{"name":" Resource requirements: Small clusters won't help"},
+				{"name":"Steady release cycle: fast paced release cycle, for change it is required to do compatibility testing"}]}
+				
+				  ]}]},
+		  {"name":"Embed In App"}
+		  ]},
+		  {"name":"Near Real Time",
+		"children":[{"name":"System Image","children":[{"name":"Ex. Data Bricks with Power BI report"}]},
+		{"name":"Containerization",
+		"children":[{"name":"Docker"},{"name":"Kubernetes"}]}]},
+		  {"name":"Batch",
+		"children":[{"name":"No Code","children":[{"name":"Ex.Ml Studio"}]},
+		{"name":"System Image","children":[{"name":"Ex.Data Bricks with ADF"}]},
+		{"name":"Containerization","children":[{"name":"Docker"},{"name":"Kubernetes"}]}]}
+		]
+		  },
+			  {"name":"Edge",
+			  "children":[
+			  {"name":"Edge Specific Framework",
+			  "children":[
+			  {"name":"Ex. Coral Edge TPU, NVIDIA JETSON"}]},
+				  {"name":"Federated Learning",
+				  "children":[
+				  {"name":"Ex.Voice Recognition in Siri, Google Android Keyboard"}]},
+					  {"name":"Model Compression and Quantization"},
+						  {"name":"Tensorflow Lite"},
+								  {"name":"ONNX runtime"}]},
+								  {"name": "On Prim",
+								  "children":
+								  [
+								  {"name":"On Your Infrastructure"}]}
+  
+  ]
+}
